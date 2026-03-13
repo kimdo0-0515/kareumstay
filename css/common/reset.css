@@ -94,7 +94,7 @@ a{
 a, a:active, a:hover{
   display: inline-block;
 	text-decoration: none;
-	color: inherit;
+	/* color: inherit; */
 }
 address, caption, cite, code, dfn, em, var{
   font-style: normal;
