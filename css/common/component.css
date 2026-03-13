@@ -1,0 +1,81 @@
+h1, h2, h3, h4{
+  font-family: 'FlightSans';
+  font-weight: 700;
+}
+h1{ font-size: var(--fs-48); }
+h2{ font-size: var(--fs-42); }
+h3{ font-size: var(--fs-36); }
+h4{ font-size: var(--fs-30); }
+
+/* 본문 내 작은 타이틀 */
+[class*="title--"]{
+  font-weight: 600;
+  line-height: 140%;
+}
+.title--xl{ font-size: var(--fs-28); }
+.title--l{ font-size: var(--fs-26); }
+.title--m{ font-size: var(--fs-24); }
+.title--s{ font-size: var(--fs-20); }
+
+/* 본문 */
+.text--xl{ font-size: var(--fs-20); }
+.text--l{ font-size: var(--fs-18); }
+.text--m{ font-size: var(--fs-16); }
+.text--s{ font-size: var(--fs-15); }
+
+
+
+/* ===== 버튼 정의 ===== */
+/* button init */
+.btn{
+	width: fit-content;
+	background-color: transparent;
+	border: none;
+  font-weight: 600;
+	text-align: center;
+	transition: var(--transition-025);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+  gap: 10px;
+}
+[class*="btn--solid"]{
+	height: 50px;
+	padding: 0 32px;
+}
+.btn--text{
+	height: 36px;
+}
+.btn--solid-orange{
+	background-color: var(--white);
+	border: 1px solid var(--orange-500);
+	color: var(--orange-500);
+}
+.btn--solid-gray{
+	background-color: var(--white);
+	border: 1px solid var(--gray-400);
+	color: var(--gray-500);
+}
+.btn--text{
+	color: var(--gray-500);
+}
+.btn--text .plus--orange{
+	display: none;
+}
+@media (hover: hover) and (pointer: fine){
+	:where(.btn--solid-orange, .btn--solid-gray):hover{
+		background-color: var(--orange-500);
+		border-color: var(--orange-500);
+		color: var(--white);
+	}
+	.btn--text:hover{
+		color: var(--orange-500);
+	}
+	.btn--text:hover .plus--gray{
+		display: none;
+	}
+	.btn--text:hover .plus--orange{
+		display: block;
+	}
+}
