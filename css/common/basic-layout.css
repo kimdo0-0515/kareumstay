@@ -159,20 +159,69 @@ body{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 72px;
 }
 .footer__logo{
   width: 136px;
+}
+.footer__host-info-wrap{
+  flex: 1;
 }
 .host-apply{
   font-size: var(--fs-24);
   font-weight: 600;
   color: var(--gold-400);
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 32px;
 }
 .host-apply img{
   width: 32px;
+  height: fit-content;
 }
+.footer__info-wrap, .copyright{
+  font-size: var(--fs-15);
+  color: var(--gray-300);
+  line-height: 140%;
+}
+.footer__info-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 16px;
+}
+.info{
+  line-height: inherit;
+}
+.info + .info{
+  padding-left: 12px;
+  position: relative;
+}
+.info + .info::before{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: var(--gray-300);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.info a{
+  width: fit-content;
+  text-decoration: underline;
+}
+.jeju-logo-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.jeju-logo-wrap img:nth-child(1){ height: 36px; }
+.jeju-logo-wrap img:nth-child(2){ height: 84px; }
+.jeju-logo-wrap img:nth-child(3){ height: 56px; }
 
 
 
@@ -302,6 +351,48 @@ body{
     padding: 0 calc((100% - var(--inner)) / 2);
     line-height: 64px;
   }
+
+
+
+  /* === Footer === */
+  .host-apply__mo{
+    height: 56px;
+    background-color: var(--gold-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    font-size: var(--fs-18);
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+  .host-apply__mo img{
+    width: 32px;
+  }
+  .footer .inner{
+    padding: 48px 0 24px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .host-apply{
+    display: none;
+  }
+  .footer__info-wrap{
+    justify-content: center;
+  }
+  .copyright{
+    text-align: center;
+  }
+  .jeju-logo-wrap{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .jeju-logo-wrap img:nth-child(2){ height: 60px; }
+  .jeju-logo-wrap img:nth-child(3){ height: 36px; }
 }
 
 
@@ -339,4 +430,21 @@ body{
   /* .section{
     padding: 60px 0;
   } */
+
+
+
+  /* === Footer === */
+  .host-apply__mo{
+    padding: calc((100% - var(--inner)) / 2);
+    justify-content: space-between;
+  }
+  .footer__logo{
+    width: 100px;
+  }
+  .footer__info-wrap{
+    gap: 4px 12px;
+  }
+  .jeju-logo-wrap img:nth-child(1){ height: 16px; }
+  .jeju-logo-wrap img:nth-child(2){ height: 24px; }
+  .jeju-logo-wrap img:nth-child(3){ height: 16px; }
 }

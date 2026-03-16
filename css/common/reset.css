@@ -90,12 +90,14 @@ button{
 }
 a{
   width: 100%;
-}
-a, a:active, a:hover{
   display: inline-block;
 	text-decoration: none;
-	/* color: inherit; */
 }
+/* a, a:active, a:hover{
+  display: inline-block;
+	text-decoration: none;
+	color: inherit;
+} */
 address, caption, cite, code, dfn, em, var{
   font-style: normal;
   font-weight: 400
