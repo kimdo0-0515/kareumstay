@@ -1,0 +1,342 @@
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+ ::-webkit-scrollbar{
+  display: none;
+ }
+.body__inner{
+  width: 100%;
+  height: auto;
+}
+.inner{
+  width: var(--inner);
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* ========== Header ========== */
+.header{
+  width: 100%;
+  height: 100px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition-duration: var(--transition-015);
+}
+.header .inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo{
+  width: 226px;
+}
+.header .nav{
+  height: 100%;
+}
+.gnb{
+  height: 100%;
+  display: flex;
+}
+.gnb__li{
+  height: 100%;
+  margin: 0 40px;
+  font-size: var(--fs-20);
+  font-weight: 600;
+  color: var(--gray-700);
+  transition-duration: var(--transition-025);
+  position: relative;
+}
+.gnb__li::before{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: var(--orange-500);
+  opacity: 0;
+  transition-duration: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.gnb__li > a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.gnb__li:hover{
+  color: var(--orange-500);
+}
+.gnb__li:hover::before{
+  opacity: 1;
+}
+.lnb{
+  height: 0;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  font-size: var(--fs-16);
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  transition-duration: var(--transition-015);
+}
+.gnb__li:not(:nth-child(1)) .lnb{
+  right: 0;
+}
+.gnb__li:nth-child(2) .lnb{
+  transform: translateX(calc(4*40px + 156px));
+}
+.gnb__li:nth-child(3) .lnb{
+  transform: translateX(calc(2*40px + 87px));
+}
+.gnb__li:hover .lnb{
+  height: 64px;
+}
+.lnb__li{
+  height: 100%;
+  color: var(--gray-500);
+  transition-duration: var(--transition-025);
+}
+.lnb__li a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.lnb__li:hover{
+  color: var(--black);
+}
+#moMenuOpenBtn{
+  display: none;
+}
+.lnb-bg{
+  width: 100%;
+  height: 0;
+  background-color: var(--white);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  opacity: 0.8;
+  transition-duration: var(--transition-025);
+  position: relative;
+  z-index: -1;
+}
+.inner:has(.gnb__li:not(:last-child):hover) ~ .lnb-bg{
+  height: 64px;
+}
+.mobile-menu{
+  display: none;
+}
+
+
+
+/* ========== Main ========== */
+.main{
+  width: 100%;
+  margin-top: 100px;  /* 헤더 높이만큼 마진 */
+}
+.section{
+  width: 100%;
+  padding: 60px 0;
+}
+
+
+
+/* ========== Footer ========== */
+.footer{
+  background-color: var(--gray-700);
+}
+.host-apply__mo{
+  display: none;
+}
+.footer .inner{
+  padding: 72px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footer__logo{
+  width: 136px;
+}
+.host-apply{
+  font-size: var(--fs-24);
+  font-weight: 600;
+  color: var(--gold-400);
+  margin-bottom: 32px;
+}
+.host-apply img{
+  width: 32px;
+}
+
+
+
+/* ========== Responsive: Laptop ========== */
+@media all and (max-width: 1780px){
+  
+}
+
+
+
+/* ========== Responsive: Tablet ========== */
+@media all and (max-width: 1280px){
+  /* === Header === */
+  .header .nav{
+    display: none;
+  }
+  #moMenuOpenBtn, #moMenuCloseBtn{
+    display: block;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    padding: 6px;
+  }
+
+
+
+  /* === Mobile menu === */
+  .mobile-menu{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1001;
+    transition-duration: var(--transition-035);
+  }
+  .mobile-menu.is-open{
+    left: 0;
+  }
+  .mobile-gnb-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+  }
+  .mobile-gnb-wrap .inner{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-gnb__header{
+    height: 100px;  /* 모바일에서 72px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-gnb__li{
+    height: 72px;
+    font-size: var(--fs-20);
+    font-weight: 600;
+    color: var(--gray-700);
+    line-height: 72px;
+  }
+  .ect-wrap{
+    margin-top: auto;
+    margin-bottom: 36px;
+  }
+  .etc-menu{
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--fs-18);
+    font-weight: 600;
+  }
+  .etc-menu:nth-child(1){ color: var(--gray-700); }
+  .etc-menu:nth-child(2){ color: var(--orange-500); }
+  .etc-menu img{
+    width: 24px;
+  }
+  .mobile-lnb-wrap{
+    width: 100%;
+    height: calc(100% - 100px); /* 모바일에서 calc(100% - 72px) */
+    background-color: var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px; /* 모바일에선 72 */
+    left: 100%;
+    transition-duration: var(--transition-035);
+  }
+  .mobile-lnb-wrap.is-open{
+    left: 0;
+  }
+  .lnb-close-btn{
+    width: 100%;
+    height: 48px;
+    padding: 0 calc((100% - var(--inner)) / 2);
+    background-color: var(--gray-400);
+    font-size: var(--fs-16);
+    font-weight: 400;
+    color: var(--white);
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .lnb-close-btn img{
+    width: 20px;
+  }
+  .mobile-lnb__title{
+    height: 72px;
+    padding: 0 calc((100% - var(--inner)) / 2);
+    background-color: var(--white);
+    font-size: var(--fs-20);
+    font-weight: 600;
+    color: var(--gray-700);
+    line-height: 72px;
+  }
+  .mobile-lnb-wrap .nav{
+    flex: 1;
+    overflow-y: auto;
+  }
+  .mobile-lnb__li{
+    height: 64px;
+    font-size: var(--fs-18);
+  }
+  .mobile-lnb__li a{
+    height: 100%;
+    padding: 0 calc((100% - var(--inner)) / 2);
+    line-height: 64px;
+  }
+}
+
+
+
+/* ========== Responsive: Mobile ========== */
+@media all and (max-width: 768px){
+  /* === Header === */
+  .header{
+    height: 72px;
+  }
+  .header__logo{
+    width: 160px;
+  }
+  #moMenuOpenBtn, #moMenuCloseBtn{
+    width: 36px;
+  }
+
+
+
+  /* === Mobile menu === */
+  .mobile-gnb__header{
+    height: 72px;
+  }
+  .mobile-lnb-wrap{
+    height: calc(100% - 72px);
+    top: 72px;
+  }
+
+
+
+  /* === Main === */
+  .main{
+    margin-top: 72px;
+  }
+  /* .section{
+    padding: 60px 0;
+  } */
+}
