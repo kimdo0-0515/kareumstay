@@ -1,3 +1,6 @@
+// 모바일에서 아래로 스크롤 하면 헤더가 위로 슬라이딩 돼서 감춰짐
+// 그러다 위로 스크롤 하면 다시 나옴
+
 
 
 
@@ -10,6 +13,27 @@ const $moMenuCloseBtn = document.getElementById('moMenuCloseBtn');
 const $mobileGnbs = document.querySelectorAll('.mobile-gnb__li');
 const $mobileLnbWraps = document.querySelectorAll('.mobile-lnb-wrap');
 const $lnbCloseBtns = document.querySelectorAll('.lnb-close-btn');
+
+const mainSwiper = new Swiper("#mainSwiper", {
+  loop: true,
+  /* autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
+  effect: "fade",
+  pagination: {
+    el: "#mainSwiper .swiper-pagination",
+    type: "fraction",
+  },
+  breakpoints: {
+    768.01: {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }
+    }
+  }
+});
 
 
 
@@ -71,3 +95,17 @@ function mobileGnbsClick(){
 function lnbCloseBtnClick(){
   this.closest('.mobile-lnb-wrap').classList.remove('is-open');
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ====================
+Resonsive Functions
+==================== */

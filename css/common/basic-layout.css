@@ -149,6 +149,7 @@ body{
 /* ========== Footer ========== */
 .footer{
   background-color: var(--gray-700);
+  margin-top: 100px;
 }
 .host-apply__mo{
   display: none;
@@ -427,13 +428,13 @@ body{
   .main{
     margin-top: 72px;
   }
-  /* .section{
-    padding: 60px 0;
-  } */
 
 
 
   /* === Footer === */
+  .footer{
+    margin-top: 0;
+  }
   .host-apply__mo{
     padding: calc((100% - var(--inner)) / 2);
     justify-content: space-between;
