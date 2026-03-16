@@ -2,6 +2,14 @@
 // 그러다 위로 스크롤 하면 다시 나옴
 
 
+/* 모바일 메인 비주얼에서
+.swiper-slide의 노드 리스트 배열을 변수에 담음
+.swiper-scroll-wrap span의 너비는 (100% / 노드 리스트 length)
+.swiper-scroll-wrap span의 left는 (자기의 너비값 * .swiper-slide 중 swiper-slide-active를 같이 가진 것의 인덱스 번호)
+이 이벤트가 swiper slide가 on 될 때마다 함수를 적용해야 할 듯
+*/
+
+
 
 
 /* ====================
