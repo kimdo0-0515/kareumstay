@@ -177,8 +177,64 @@
   padding: 96px 0;  /* 모바일에서 변경 */
   background-color: var(--yellow);
 }
-#signatureSwiper .mo-signature-slide{ /* 모바일에서 보이게 */
+#signatureSwiper{
+  position: relative;
+}
+.signature-slide{ /* 모바일에서 숨김 */
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: space-between;
+}
+.signature-desc-wrap{
+  width: 420px;
+}
+.signature-desc-wrap h2{
+  margin: 40px 0 24px 0;
+  line-height: 120%;
+}
+.signature-desc-wrap p{
+  font-size: var(--fs-20);
+  color: var(--gray-800);
+  line-height: 160%;
+}
+.signature-desc-wrap .signature-desc__tag{
+  font-size: var(--fs-16);
+  color: var(--orange-400);
+  margin: 30px 0;
+}
+.mo-signature-slide{ /* 모바일에서 보이게 */
   display: none;
+}
+#signatureSwiper .swiper-navi-wrap{
+  width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#signatureSwiper .swiper-navi-wrap *{
+  position: static;
+}
+#signatureSwiper .swiper-scrollbar{
+  flex: 1;
+  background-color: var(--white);
+}
+#signatureSwiper .swiper-scrollbar-drag{
+  background-color: var(--orange-500);
+}
+#signatureSwiper .swiper-btn-wrap{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+#signatureSwiper :where(.swiper-button-prev, .swiper-button-next){
+  width: 16px;
+  height: unset;
+  aspect-ratio: 1 / 1;
+  color: var(--orange-500);
+  margin: 0;
 }
 
 
