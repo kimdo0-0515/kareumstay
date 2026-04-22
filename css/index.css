@@ -95,10 +95,10 @@
   gap: 30px;
   margin-bottom: 72px;
 }
-#townSec .inner hr{ /* 모바일에서 숨기기 */
+#townSec .inner hr{
   flex: 1;
 }
-#townSec .inner .title--s{ /* 모바일에서 숨기기 */
+#townSec .inner .title--s{
   color: var(--gray-700);
 }
 .townSec__content{
@@ -115,33 +115,33 @@
   position: absolute;
 }
 .bg-illust-wrap img:nth-child(1), .bg-illust-wrap img:nth-child(2), .bg-illust-wrap img:nth-child(3){
-  width: 60px;  /* 모바일에서 45px */
+  width: 60px;
 }
 .bg-illust-wrap img:nth-child(4), .bg-illust-wrap img:nth-child(5){
-  width: 90px; /* 모바일에서 80px */
+  width: 90px;
 }
-.bg-illust-wrap img:nth-child(1){ /* 모바일에서 숨기기 */
+.bg-illust-wrap img:nth-child(1){
   top: 10%;
   left: 10%;
 }
-.bg-illust-wrap img:nth-child(2){ /* 모바일에서 위치 재조정 */
+.bg-illust-wrap img:nth-child(2){
   top: 15%;
   left: 65%;
 }
-.bg-illust-wrap img:nth-child(3){ /* 모바일에서 숨기기 */
+.bg-illust-wrap img:nth-child(3){
   top: 40%;
   left: 5%;
 }
-.bg-illust-wrap img:nth-child(4){ /* 모바일에서 위치 재조정 */
+.bg-illust-wrap img:nth-child(4){
   top: 60%;
   left: 80%;
 }
-.bg-illust-wrap img:nth-child(5){ /* 모바일에서 위치 재조정 */
+.bg-illust-wrap img:nth-child(5){
   top: 80%;
   left: 40%;
 }
 #townSwiper{
-  height: 660px;  /* 모바일에서 400px */
+  height: 660px;
   padding: 0 calc((100% - var(--inner)) / 2);
 }
 #townSwiper .swiper-slide{
@@ -149,7 +149,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;  /* 모바일에서 12px */
+  gap: 24px;
 }
 #townSwiper .swiper-slide.align--top{
   justify-content: flex-start;
@@ -164,7 +164,7 @@
 
 
 /* ========== section: 카름 시그니처 슬라이드 ========== */
-.signature-title{ /* 모바일에서 숨김 */
+.signature-title{
   width: var(--inner);
   margin: 0 auto;
   font-size: 8.22vw;
@@ -174,16 +174,21 @@
   line-height: 0.7;
 }
 .signatureSec__content{
-  padding: 96px 0;  /* 모바일에서 변경 */
+  padding: 96px 0;
   background-color: var(--yellow);
 }
 #signatureSwiper{
   position: relative;
 }
-.signature-slide{ /* 모바일에서 숨김 */
+.signature-slide{
   background-color: var(--yellow);
   display: flex;
   justify-content: space-between;
+  gap: 48px;
+}
+.signature-slide > img{
+  max-width: calc(100% - 48px - 420px);
+  object-fit: contain;
 }
 .signature-desc-wrap{
   width: 420px;
@@ -202,7 +207,7 @@
   color: var(--orange-400);
   margin: 30px 0;
 }
-.mo-signature-slide{ /* 모바일에서 보이게 */
+.mo-signature-slide{
   display: none;
 }
 #signatureSwiper .swiper-navi-wrap{
@@ -219,10 +224,13 @@
 }
 #signatureSwiper .swiper-scrollbar{
   flex: 1;
+  height: 3px;
   background-color: var(--white);
+  border-radius: 0;
 }
 #signatureSwiper .swiper-scrollbar-drag{
   background-color: var(--orange-500);
+  border-radius: 0;
 }
 #signatureSwiper .swiper-btn-wrap{
   display: flex;
@@ -397,7 +405,61 @@
   #townSwiper .swiper-slide h4{
     font-size: 18px;
   }
+
+
+
   /* ===== section: 카름 시그니처 슬라이드 ===== */
+  .signature-title{
+    display: none;
+  }
+  .signatureSec__content{
+    padding: 24px 0;
+  }
+  #signatureSwiper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .signature-slide{
+    display: none;
+  }
+  .mo-signature-slide{
+    display: block;
+    background-color: var(--yellow);
+    position: relative;
+  }
+  .mo-signature-slide__img{
+    border-radius: 10px;
+  }
+  .mo-signature-slide__corner{
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .mo-signature-slide__desc-wrap{
+    color: var(--white);
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+  }
+  .mo-signature-slide__desc-wrap p{
+    font-size: var(--fs-18);
+    font-weight: 600;
+  }
+  .mo-signature-slide__desc-wrap h4{
+    line-height: 130%;
+  }
+  #signatureSwiper .swiper-navi-wrap{
+    width: 100%;
+    position: static;
+  }
+  #signatureSwiper .swiper-btn-wrap{
+    gap: 16px;
+  }
+
+
+
   /* ===== section: 마을 패키지 & 투어 ===== */
   /* ===== section: 원데이클래스 ===== */
   /* ===== section: 카름 마스터 ===== */
