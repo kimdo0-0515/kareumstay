@@ -1,18 +1,18 @@
 /* ========== section: 메인 비주얼 ========== */
 #mainVisualSec{
-  height: calc(100vh - 100px);  /* 모바일에서 calc(100vh - 72px) */
+  height: calc(100vh - 100px);
   padding: 0;
   margin-bottom: 60px;
 }
 #mainSwiper{
   height: 100%;
 }
-.main-visual-slide{ /* 모바일에서 안보이게 */
+.main-visual-slide{
   height: 100%;
   position: relative;
 }
 .mo-main-visual-slide{
-  display: none;  /* 모바일에선 보이도록 */
+  display: none;
 }
 .main-visual-slide img{
   width: 100%;
@@ -191,12 +191,12 @@
     z-index: 1;
   }
   .swiper-scroll-wrap span{
-    width: 30px;  /* 임시값 */
+    width: 30px;  /* 임시값 - 추후 css 삭제 */
     height: 100%;
     background-color: var(--orange-500);
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;  /* 임시값 - 추후 css 삭제 */
     transition-duration: var(--transition-025);
   }
 

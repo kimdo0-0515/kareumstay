@@ -15,6 +15,12 @@
 /* ====================
 Constants & Variables
 ==================== */
+const BREAK_POINT = {
+  laptop: 1780,
+  tab: 1280,
+  mo: 768
+};
+
 const $moMenuOpenBtn = document.getElementById('moMenuOpenBtn');
 const $mobileMenu = document.getElementById('mobileMenu');
 const $moMenuCloseBtn = document.getElementById('moMenuCloseBtn');
@@ -42,6 +48,8 @@ const mainSwiper = new Swiper("#mainSwiper", {
     }
   }
 });
+
+//const $mobileMainVisualScroll = document.
 
 
 
@@ -115,5 +123,45 @@ function lnbCloseBtnClick(){
 
 
 /* ====================
-Resonsive Functions
+Resonsive Functions - Execute Functions
 ==================== */
+window.addEventListener('resize', screenResize);
+screenResize();
+
+
+
+/* ====================
+Resonsive Functions - Define Functions
+==================== */
+function screenResize(){
+  const screenW = window.innerWidth;
+
+  if(BREAK_POINT.tab < screenW && screenW <= BREAK_POINT.laptop){
+    enterLaptop();
+  }
+  else if(BREAK_POINT.mo < screenW && screenW <= BREAK_POINT.tab){
+    enterTab();
+  }
+  else if(screenW <= BREAK_POINT.mo){
+    enterMo();
+  }
+  else{
+    enterPc();
+  }
+}
+
+function enterLaptop(){
+
+}
+
+function enterTab(){
+
+}
+
+function enterMo(){
+
+}
+
+function enterPc(){
+
+}
