@@ -89,6 +89,80 @@
 
 
 /* ========== section: 13개 마을 소개 ========== */
+#townSec .inner{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 72px;
+}
+#townSec .inner hr{ /* 모바일에서 숨기기 */
+  flex: 1;
+}
+#townSec .inner .title--s{ /* 모바일에서 숨기기 */
+  color: var(--gray-700);
+}
+.townSec__content{
+  position: relative;
+}
+.bg-illust-wrap{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bg-illust-wrap img{
+  position: absolute;
+}
+.bg-illust-wrap img:nth-child(1), .bg-illust-wrap img:nth-child(2), .bg-illust-wrap img:nth-child(3){
+  width: 60px;  /* 모바일에서 45px */
+}
+.bg-illust-wrap img:nth-child(4), .bg-illust-wrap img:nth-child(5){
+  width: 90px; /* 모바일에서 80px */
+}
+.bg-illust-wrap img:nth-child(1){ /* 모바일에서 숨기기 */
+  top: 10%;
+  left: 10%;
+}
+.bg-illust-wrap img:nth-child(2){ /* 모바일에서 위치 재조정 */
+  top: 15%;
+  left: 65%;
+}
+.bg-illust-wrap img:nth-child(3){ /* 모바일에서 숨기기 */
+  top: 40%;
+  left: 5%;
+}
+.bg-illust-wrap img:nth-child(4){ /* 모바일에서 위치 재조정 */
+  top: 60%;
+  left: 80%;
+}
+.bg-illust-wrap img:nth-child(5){ /* 모바일에서 위치 재조정 */
+  top: 80%;
+  left: 40%;
+}
+#townSwiper{
+  height: 660px;  /* 모바일에서 400px */
+  padding: 0 calc((100% - var(--inner)) / 2);
+}
+#townSwiper .swiper-slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;  /* 모바일에서 12px */
+}
+#townSwiper .swiper-slide.align--top{
+  justify-content: flex-start;
+}
+#townSwiper .swiper-slide.align--bottom{
+  justify-content: flex-end;
+}
+#townSwiper .swiper-slide p{
+  color: var(--gray-600);
+}
+
+
+
 /* ========== section: 카름 시그니처 슬라이드 ========== */
 /* ========== section: 마을 패키지 & 투어 ========== */
 /* ========== section: 원데이클래스 ========== */
@@ -203,6 +277,51 @@
 
 
   /* ===== section: 13개 마을 소개 ===== */
+  #townSec .inner{
+    margin-bottom: 36px;
+  }
+  #townSec .inner h3{
+    font-size: 26px;
+  }
+  #townSec .inner :where(hr, .title--s){
+    display: none;
+  }
+  .bg-illust-wrap img:nth-child(1), .bg-illust-wrap img:nth-child(3){
+    display: none;
+  }
+  .bg-illust-wrap img:nth-child(2){
+    width: 45px;
+  }
+  .bg-illust-wrap img:nth-child(4), .bg-illust-wrap img:nth-child(5){
+    width: 80px;
+  }
+  .bg-illust-wrap img:nth-child(2){
+    top: 0;
+    left: 75%;
+  }
+  .bg-illust-wrap img:nth-child(4){
+    top: 45%;
+    left: 5%;
+  }
+  .bg-illust-wrap img:nth-child(5){
+    top: 80%;
+    left: 50%;
+  }
+  #townSwiper{
+    height: 400px;
+  }
+  #townSwiper .swiper-slide{
+    gap: 12px;
+  }
+  #townSwiper .swiper-slide.align--top{
+    justify-content: flex-start;
+  }
+  #townSwiper .swiper-slide.align--bottom{
+    justify-content: flex-end;
+  }
+  #townSwiper .swiper-slide h4{
+    font-size: 18px;
+  }
   /* ===== section: 카름 시그니처 슬라이드 ===== */
   /* ===== section: 마을 패키지 & 투어 ===== */
   /* ===== section: 원데이클래스 ===== */

@@ -52,6 +52,27 @@ const mainSwiper = new Swiper("#mainSwiper", {
   }
 });
 
+/* ===== section: 13개 마을 소개 ===== */
+const townSwiper = new Swiper("#townSwiper", {
+  loop: true,
+  /* 사이트 완성 후 주석 해제할 예정
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
+  breakpoints: {
+    1780.01: {
+      slidesPerView: 3.1,
+    },
+    1280.01: {
+      slidesPerView: 2.75,
+    },
+    768.01: {
+      slidesPerView: 1.75,
+    }
+  },
+  slidesPerView: 1.1,
+});
 
 
 
