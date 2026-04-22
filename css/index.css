@@ -164,6 +164,25 @@
 
 
 /* ========== section: 카름 시그니처 슬라이드 ========== */
+.signature-title{ /* 모바일에서 숨김 */
+  width: var(--inner);
+  margin: 0 auto;
+  font-size: 8.22vw;
+  font-weight: 700;
+  color: var(--yellow);
+  text-align: center;
+  line-height: 0.7;
+}
+.signatureSec__content{
+  padding: 96px 0;  /* 모바일에서 변경 */
+  background-color: var(--yellow);
+}
+#signatureSwiper .mo-signature-slide{ /* 모바일에서 보이게 */
+  display: none;
+}
+
+
+
 /* ========== section: 마을 패키지 & 투어 ========== */
 /* ========== section: 원데이클래스 ========== */
 /* ========== section: 카름 마스터 ========== */

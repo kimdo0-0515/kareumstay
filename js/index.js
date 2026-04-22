@@ -41,8 +41,8 @@ const mainSwiper = new Swiper("#mainSwiper", {
   breakpoints: {
     768.01: {
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: "#mainSwiper .swiper-button-next",
+        prevEl: "#mainSwiper .swiper-button-prev",
       }
     }
   },
@@ -72,6 +72,24 @@ const townSwiper = new Swiper("#townSwiper", {
     }
   },
   slidesPerView: 1.1,
+});
+
+/* ===== section: 카름 시그니처 슬라이드 ===== */
+const signatureSwiper = new Swiper("#signatureSwiper", {
+  loop: true,
+  /* 사이트 완성 후 주석 해제할 예정
+    autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }, */
+  effect: "fade",
+  navigation: {
+    nextEl: "#signatureSwiper .swiper-button-next",
+    prevEl: "#signatureSwiper .swiper-button-prev",
+  },
+  scrollbar: {
+    el: "#signatureSwiper .swiper-scrollbar",
+  }
 });
 
 
