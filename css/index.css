@@ -191,12 +191,12 @@
     z-index: 1;
   }
   .swiper-scroll-wrap span{
-    width: 30px;  /* 임시값 - 추후 css 삭제 */
+    width: calc(100% / 8);
     height: 100%;
     background-color: var(--orange-500);
     position: absolute;
     top: 0;
-    left: 0;  /* 임시값 - 추후 css 삭제 */
+    /* left: 0; 임시값 - 추후 css 삭제 */
     transition-duration: var(--transition-025);
   }
 

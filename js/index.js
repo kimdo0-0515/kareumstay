@@ -2,25 +2,19 @@
 // 그러다 위로 스크롤 하면 다시 나옴
 
 
-/* 모바일 메인 비주얼에서
-.swiper-slide의 노드 리스트 배열을 변수에 담음
-.swiper-scroll-wrap span의 너비는 (100% / 노드 리스트 length)
-.swiper-scroll-wrap span의 left는 (자기의 너비값 * .swiper-slide 중 swiper-slide-active를 같이 가진 것의 인덱스 번호)
-이 이벤트가 swiper slide가 on 될 때마다 함수를 적용해야 할 듯
-*/
-
-
 
 
 /* ====================
 Constants & Variables
 ==================== */
+/* ===== Responsive break points ===== */
 const BREAK_POINT = {
   laptop: 1780,
   tab: 1280,
   mo: 768
 };
 
+/* ===== Header & Mobile menu ===== */
 const $moMenuOpenBtn = document.getElementById('moMenuOpenBtn');
 const $mobileMenu = document.getElementById('mobileMenu');
 const $moMenuCloseBtn = document.getElementById('moMenuCloseBtn');
@@ -28,9 +22,14 @@ const $mobileGnbs = document.querySelectorAll('.mobile-gnb__li');
 const $mobileLnbWraps = document.querySelectorAll('.mobile-lnb-wrap');
 const $lnbCloseBtns = document.querySelectorAll('.lnb-close-btn');
 
+/* ===== section: 메인 비주얼 ===== */
+const $mainSwiperSlides = document.querySelectorAll('#mainSwiper .swiper-slide');
+const $mainSwiperScroll = document.querySelector('#mainSwiper .swiper-scroll-wrap span');
+
 const mainSwiper = new Swiper("#mainSwiper", {
   loop: true,
-  /* autoplay: {
+  /* 사이트 완성 후 주석 해제할 예정
+    autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   }, */
@@ -46,10 +45,15 @@ const mainSwiper = new Swiper("#mainSwiper", {
         prevEl: ".swiper-button-prev",
       }
     }
+  },
+  on: {
+    init: updateMainSwiperScroll,
+    slideChange: updateMainSwiperScroll
   }
 });
 
-//const $mobileMainVisualScroll = document.
+
+
 
 
 
@@ -72,9 +76,6 @@ $mobileGnbs.forEach(gnb => {
 $lnbCloseBtns.forEach(btn => {
   btn.addEventListener('click', lnbCloseBtnClick);
 });
-
-
-
 
 
 
@@ -113,7 +114,15 @@ function lnbCloseBtnClick(){
 }
 
 
+/* ===== section: 메인 비주얼 ===== */
+function updateMainSwiperScroll(){
+  if(!$mainSwiperScroll) return;
 
+  const scrollWidth = $mainSwiperScroll.offsetWidth;  // 마진 제외한 요소 전체 너비(패딩, 보더 포함)
+  const activeIndex = this.realIndex;
+
+  $mainSwiperScroll.style.left = `${scrollWidth * activeIndex}px`;
+}
 
 
 
@@ -159,7 +168,7 @@ function enterTab(){
 }
 
 function enterMo(){
-
+  
 }
 
 function enterPc(){
