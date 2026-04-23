@@ -264,6 +264,26 @@
 }
 
 
+@media all and (max-width: 1480px){
+  /* ===== section: 카름 시그니처 슬라이드 ===== */
+  .signature-slide > img {
+    max-width: calc(100% - 48px - 480px);
+  }
+  .signature-desc-wrap, #signatureSwiper .swiper-navi-wrap{
+    width: 480px;
+  }
+  .signature-desc-wrap > img, .signature-desc__tag{
+    display: none;
+  }
+  .signature-desc-wrap h2{
+    margin-top: 0;
+  }
+  .signature-desc-wrap > p{
+    margin-bottom: 30px;
+  }
+}
+
+
 
 
 
@@ -272,6 +292,22 @@
   /* ===== section: 메인 비주얼 ===== */
   /* ===== section: 13개 마을 소개 ===== */
   /* ===== section: 카름 시그니처 슬라이드 ===== */
+  .signature-slide > img {
+    max-width: calc(100% - 48px - 300px);
+  }
+  .signature-desc-wrap, #signatureSwiper .swiper-navi-wrap{
+    width: 300px;
+  }
+  .signature-desc-wrap > p{
+    display: none;
+  }
+  .signature-desc-wrap .signature-desc__tag{
+    display: block;
+    margin: 20px 0;
+  }
+
+
+  
   /* ===== section: 마을 패키지 & 투어 ===== */
   /* ===== section: 원데이클래스 ===== */
   /* ===== section: 카름 마스터 ===== */
