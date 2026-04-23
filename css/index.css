@@ -167,7 +167,7 @@
 .signature-title{
   width: var(--inner);
   margin: 0 auto;
-  font-size: 8.22vw;
+  font-size: clamp(42px, 8.22vw, 158px);
   font-weight: 700;
   color: var(--yellow);
   text-align: center;
